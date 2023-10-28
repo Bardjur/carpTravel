@@ -2,7 +2,7 @@ import Nav from '../Nav';
 import Logo from '../Logo';
 
 export default function Header() {
-  const menu = [{ link: '#', name: "About" }, { link: '#', name: "Services" }, { link: '#', name: "Career" }, { link: '#', name: "Gallery" }, { link: '#', name: "Contacts" }];
+  const menu = [{ link: 'about', name: "About" }, { link: 'services', name: "Services" }, { link: 'career', name: "Career" }, { link: 'gallery', name: "Gallery" }, { link: 'contacts', name: "Contacts" }];
 
   return (
     <header className='absolute top-9 md:top-6 left-0 w-full'>

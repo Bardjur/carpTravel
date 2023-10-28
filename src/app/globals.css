@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bgGradient: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+    linear-gradient(180deg, rgba(0, 24, 38, 0.75) 0%, rgba(0, 37, 49, 0) 50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,4 +26,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .responsive {
+    @apply mx-auto py-14 md:py-16 xl:py-[104px] px-5 md:px-8 xl:px-6 sm:w-[480px] md:w-[768px] xl:w-[1280px];
+  }
+
+  .heading {
+    @apply text-[40px] md:text-[67px] xl:text-[98px] font-thin uppercase leading-[56px] md:leading-none;
+  }
+
+  .text {
+    @apply text-[14px] md:text-[16px] xl:text-[18px] font-extralight leading-[20px] xl:leading-[24px];
+  }
+
+  .text2 {
+    @apply text-[14px] md:text-[13px] xl:text-[18px] font-extralight leading-[20px] xl:leading-[24px];
+  }
 }

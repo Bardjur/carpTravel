@@ -1,0 +1,20 @@
+.section {
+  background-image: var(--bgGradient), url("../../assets/imgs/careerBG_mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/careerBG_tab.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/careerBG_desktop.png");
+  }
+}

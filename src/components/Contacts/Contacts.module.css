@@ -1,0 +1,21 @@
+.section {
+  background-image: var(--bgGradient),
+    url("../../assets/imgs/сontactsBG_mob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width:768px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/сontactsBG_Tab.png");
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/сontactsBG_Desktop.png");
+  }
+}

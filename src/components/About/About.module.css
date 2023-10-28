@@ -1,0 +1,28 @@
+.section {
+  background-image: var(--bgGradient),
+    url("../../assets/imgs/aboutBG_mobXS.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/aboutBG_mob.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/aboutBG_Tab.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    background-image: var(--bgGradient),
+      url("../../assets/imgs/aboutBG_Desktop.png");
+  }
+}
