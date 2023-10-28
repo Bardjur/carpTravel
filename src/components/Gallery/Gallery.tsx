@@ -8,12 +8,13 @@ import './gallery.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Image from 'next/image';
 
 const slides = ['gallery1.png', 'gallery2.png', 'gallery3.png','gallery1.png'];
 
-export default function Gallery() {
+export default function Gallery({id}: {id: string}) {
   return (
-    <section>
+    <section id={id}>
       <div className={`${css.gallery} gallery responsive`}>
         <h2 className="max-xl:md:text-center heading mb-[24px] md:mb-[64px] xl:mb-[24px]">
           OUR
@@ -45,7 +46,7 @@ export default function Gallery() {
           {slides.map((item, id) => (
             <SwiperSlide key={id} >
               <div className="imgWrap ">
-                <img src={item} alt={`slide ${id}`} />
+                <Image width="604" height="429" src={`/${item}`} alt={`slide ${id}`} />
               </div>
             </SwiperSlide>
           ))}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import cross from '../../../assets/imgs/cross.svg';
 import { TInputWrapProps } from '../../../types'
 
@@ -9,7 +10,7 @@ export default function InputWrap({ title, className, error, children } : TInput
         { children }
         {error && (
           <div className="absolute bottom-0 right-0 flex justify-end text-[12px] leading-[1.5] text-rose-500 font-extralight  tracking-[2.4px]">
-            <img src={cross.src} alt=""/>
+            <Image width="18" src={cross.src} alt=""/>
             <span>{`${error}`}</span>
           </div>
         )}

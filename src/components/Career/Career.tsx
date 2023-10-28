@@ -42,14 +42,14 @@ export default function Career({id}: {id: string}) {
           </div>
   
           <div className="hidden md:block w-full">
-            <p className="text2 w-[179px] xl:w-[234px] mb-[28px] xl:mt-[-100px]">Don't miss your opportunity!<br/> Fill out the form right now and join our team!</p>
+            <p className="text2 w-[179px] xl:w-[234px] mb-[28px] xl:mt-[-100px]">Don&rsquo;t miss your opportunity!<br/> Fill out the form right now and join our team!</p>
             <CareerForm />
           </div>
         </div>
       </div>
       
       <div className={`${css.section} responsive md:hidden`}>
-        <p className="text2 w-[179px] ml-auto mb-[24px]">Don't miss your opportunity!<br/> Fill out the form right now and join our team!</p>
+        <p className="text2 w-[179px] ml-auto mb-[24px]">Don&rsquo;t miss your opportunity!<br/> Fill out the form right now and join our team!</p>
         <CareerForm />
       </div>
     </section>

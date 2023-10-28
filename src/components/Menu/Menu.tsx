@@ -4,18 +4,18 @@ import { useEffect } from 'react';
 import { TMenu } from '../../types';
 import { Link,Events } from 'react-scroll';
 
-export default function Menu({ links, className, isMobile, onClick }: { links: TMenu[], className: string, isMobile?: boolean, onClick: Function }) {
+export default function Menu({ links, className, isMobile, onClick }: { links: TMenu[], className: string, isMobile?: boolean, onClick?: Function }) {
   useEffect(() => {
     Events.scrollEvent.register('begin', () => {
       if (isMobile) {
-        onClick();
+        onClick && onClick();
       }
     });
 
     return () => {
       Events.scrollEvent.remove('begin');
     };
-  }, []);
+  }, [onClick, isMobile]);
 
   return (
     <ul className={className}>

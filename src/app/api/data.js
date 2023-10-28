@@ -56,7 +56,7 @@ export const slides = [
       desk: "slideBG_desk_4.png",
     },
     appeal: "Overcome your fears",
-    text: "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever.",
+    text: "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird&rsquo;s eye view forever.",
     paginationText: "Skydiving",
   },
   {

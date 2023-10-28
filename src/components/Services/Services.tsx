@@ -1,7 +1,7 @@
 import ServiceSlider from '../ServiceSlider';
 
 export default async function Services({ id }: { id: string }) {
-  const data = await fetch('http://localhost:3000/api/slides');
+  const data = await fetch(`${process.env.API_HOST}`);
   const slides = await data.json();
 
   return (

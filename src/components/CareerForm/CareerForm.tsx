@@ -6,15 +6,7 @@ import { useEffect } from 'react';
 import Input from '../FormElems/Input';
 import Textarea from '../FormElems/Textarea';
 import InputPhone from '../FormElems/InputPhone/InputPhone';
-
-interface IFormInput {
-  name: string,
-  email: string,
-  position: string,
-  phone: string,
-  message: string,
-  confirm: boolean
-}
+import { ICareerFormInputs } from '@/types';
 
 export default function CareerForm({className}: {className?: string}) {
   const {
@@ -23,16 +15,16 @@ export default function CareerForm({className}: {className?: string}) {
     watch,
     setValue,
     formState: { errors },
-  } = useForm<IFormInput>();
+  } = useForm<ICareerFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInput> = data => {console.log(data);
+  const onSubmit: SubmitHandler<ICareerFormInputs> = data => {console.log(data);
   }
   useEffect(() => {
     const subs = watch('phone')
     const x = subs.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,2})(\d{0,3})$/) || [];
     let b = x[1] && subs.length > 4 ? "(" + x[1] + ") " + x[2] + ' ' + x[3] + ' ' + x[4] : "";
     setValue('phone', b.length > subs.length ? b.trim() : subs.trim());
-  }, [watch('phone')]);
+  }, [watch('phone'),setValue,watch]);
 
   return (
     <form className={`${className} bg-inherit`} onSubmit={handleSubmit(onSubmit)} autoComplete="off">

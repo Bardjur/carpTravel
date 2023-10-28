@@ -13,7 +13,7 @@ export default function Hero({id}: {id?: string}) {
 
         <div className="mb-6 md:mb-0 md:w-[426px] xl:w-[646px]">
           <h1 className="heading md:leading-[81px] xl:leading-[119px] mb-6 md:mb-[68px] xl:mb-[148px] md:tracking-[-2.5px]">
-            <span className="font-medium">Uncover</span> Carpathian’s Secrets
+            <span className="font-medium">Uncover</span> Carpathian&rsquo;s Secrets
           </h1>
 
           <p className="w-[157px] md:w-[262px] xl:w-[608px] text-[10px] md:text-sm xl:text-base font-extralight leading-[16px] md:leading-4 xl:leading-normal md:tracking-wider">Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel</p>

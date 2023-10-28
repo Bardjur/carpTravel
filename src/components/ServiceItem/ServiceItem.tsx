@@ -17,7 +17,7 @@ export default function ServiceItem({slide}: {slide: TServiceSlideProps}) {
         <picture className="block mb-3 md:mb-0 md:shrink-0">
           <source media="(min-width:1280px)" srcSet={slide.img.desk} />
           <source media="(min-width:768px)" srcSet={slide.img.tab} />
-          <img src={slide.img.mob} className="mx-auto"/>
+          <img src={slide.img.mob} className="mx-auto" alt="slide"/>
         </picture>
   
         <div className="flex flex-col md:w-[221px] xl:w-[293px]">
