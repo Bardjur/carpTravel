@@ -1,8 +1,14 @@
 import ServiceSlider from '../ServiceSlider';
 
 export default async function Services({ id }: { id: string }) {
-  const data = await fetch(`${process.env.API_HOST}`);
-  const slides = await data.json();
+  let slides = null
+  try {
+    const data = await fetch(`${process.env.API_HOST}`);
+    slides = await data.json();
+  } catch (error) {
+
+  }
+  
 
   return (
     <section id={id}>
