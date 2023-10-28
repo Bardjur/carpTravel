@@ -32,9 +32,8 @@ export default function CareerForm({className}: {className?: string}) {
     const x = subs.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,2})(\d{0,3})$/) || [];
     let b = x[1] && subs.length > 4 ? "(" + x[1] + ") " + x[2] + ' ' + x[3] + ' ' + x[4] : "";
     setValue('phone', b.length > subs.length ? b.trim() : subs.trim());
-  }, [watch('phone')])
-  console.log(errors);
-  
+  }, [watch('phone')]);
+
   return (
     <form className={`${className} bg-inherit`} onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div className="md:flex md:justify-between">
