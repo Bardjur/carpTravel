@@ -46,7 +46,7 @@ export default function Gallery({id}: {id: string}) {
           {slides.map((item, id) => (
             <SwiperSlide key={id} >
               <div className="imgWrap ">
-                <img src={item} alt={`slide ${id}`} />
+                <Image width="604" height="429" src={`/${item}`} alt={`slide ${id}`} />
               </div>
             </SwiperSlide>
           ))}

@@ -1,20 +1,26 @@
 import ServiceSlider from '../ServiceSlider';
 
-export default async function Services({ id }: { id: string }) {
-  let slides = null
+async function getData() {
   try {
     const data = await fetch(`${process.env.API_HOST}`);
-    slides = await data.json();
-  } catch (error) {
 
-  }
+    if (!data.ok) {
+      throw new Error('Failed to fetch data')
+    }
+
+    return data.json();
+  } catch (error) {}
+}
+
+
+export default async function Services({ id }: { id: string }) {
+  const slides = await getData();
+  console.log(slides);
   
-
   return (
     <section id={id}>
-      {slides
-        ? <ServiceSlider slides={slides} />
-        : <div className='responsive flex justify-center font-bold items-center align-middle h-[300px] bg-[rgba(0, 37, 49, 1)]'><p className='text-[40px]'>Loading...</p></div>}
+      <ServiceSlider slides={slides} />
+
     </section>
   )
 }
