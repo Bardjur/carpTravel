@@ -5,12 +5,11 @@ async function getData() {
     const data = await fetch(`${process.env.API_HOST}`);
 
     if (!data.ok) {
-      return [];
-      //throw new Error('Failed to fetch data')
+      throw new Error('Failed to fetch data')
     }
 
     return data.json();
-  } catch (error) {}
+  } catch (error) {return[]}
 }
 
 
